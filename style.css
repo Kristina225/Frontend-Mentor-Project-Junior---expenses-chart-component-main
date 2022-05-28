@@ -11,7 +11,6 @@
 :root {
     font-size: 62.5%;
     --color-soft-red: #ec775f;
-    --color-bar: #76b5bc; 
     --color-cyan: #76b5bc;
     --color-dark-brown: #382314;
     --color-medium-brown: #93867b;
@@ -105,21 +104,22 @@ main {
     height: 5rem;
     border-radius: 0.3rem;
     position: relative;
-    background-color: var(--color-bar);
+    background-color: var(--color-soft-red);
 }
 
 .bar--size:hover {
     cursor: pointer;
-    background-color: rgba(118, 181, 188, 0.75);
+    background-color: rgba(236, 119, 95, 0.75);
+    
 }
 
 /* Class added with Javascript change color of the current day */
 .bar--size.current {
-    background-color: var(--color-soft-red);
+    background-color: var(--color-cyan);
 }
 
 .bar--size.current:hover {
-    background-color: rgb(236, 119, 95, 0.75);
+    background-color: rgba(118, 181, 188, 0.75);;
 }
 
 .bar--amount {
@@ -233,7 +233,7 @@ main {
     
     .card {
         width: 54rem;
-        padding: 3.2rem 4rem;
+        padding: 3.2rem 4rem 4rem 4rem;
         border-radius: 2rem;
     }
     
