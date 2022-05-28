@@ -180,6 +180,10 @@ main {
     color: var(--color-dark-brown);
 }
 
+.card__data--increase {
+    margin-bottom: 0.7rem;
+}
+
 .card__data--increase-percentage {
     font-weight: 700;
     font-size: 1.5rem;
