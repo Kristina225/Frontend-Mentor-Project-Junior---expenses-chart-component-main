@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    --color-soft-red: #ec775f;
+    --color-bar: #76b5bc; 
+    --color-cyan: #76b5bc;
+    --color-dark-brown: #382314;
+    --color-medium-brown: #93867b;
+    --color-cream: #f8e9dd;
+    --color-very-pale-orange: #fffaf5;
+}
+
+/* ---------------------------------------- MOBILE VIEW ----------------------------------- */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--color-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.6rem;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 34.3rem;
+}
+
+/* ------------------------------- Mobile View: Top Card Styles ------------------------- */
+
+.top-card {
+    width: 34.3rem;
+    padding: 2rem 2.4rem 2.2rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--color-soft-red);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-card__logo {
+    max-width: 6rem;
+}
+
+.top-card__data--balance-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+.top-card__data--balance-num {
+    margin-top: 0.4rem;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+    font-weight: 700;
+}
+
+/* ------------------------------- Mobile View: Main Card Styles ------------------------- */
+
+.card {
+    width: 34.3rem;
+    padding: 2.4rem 2rem;
+    background-color: var(--color-very-pale-orange);
+    border-radius: 1rem;
+}
+
+.card__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.1rem;
+    color: var(--color-dark-brown);
+}
+
+.card__bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.card__bars {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5.2rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 2px solid var(--color-cream);
+}
+
+.bar--size {
+    width: 3.3rem;
+    height: 5rem;
+    border-radius: 0.3rem;
+    position: relative;
+    background-color: var(--color-bar);
+}
+
+.bar--size:hover {
+    cursor: pointer;
+    background-color: rgba(118, 181, 188, 0.75);
+}
+
+/* Class added with Javascript change color of the current day */
+.bar--size.current {
+    background-color: var(--color-soft-red);
+}
+
+.bar--size.current:hover {
+    background-color: rgb(236, 119, 95, 0.75);
+}
+
+.bar--amount {
+    width: 7rem;
+    height: 4rem;
+    background-color: var(--color-dark-brown);
+    border-radius: 0.5rem;
+    position: absolute;
+    top: -4.8rem;
+    left: -1rem;
+    display: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    display: none;
+}
+
+.bar--size:hover::after {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.bar--size:hover .bar--amount {
+    display: flex;
+}
+
+
+.bar--day {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: var(--color-medium-brown);
+}
+
+.card__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2.4rem;
+}
+
+.card__data--total--text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-medium-brown);
+}
+
+.card__data--total--usd {
+    margin-top: 0.4rem;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.9rem;
+    color: var(--color-dark-brown);
+}
+
+.card__data--increase-percentage {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-dark-brown);
+    text-align: right;
+}
+
+.card__data--increase-text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-medium-brown);
+}
+
+
+/* --------------------------------------- DESKTOP VIEW ------------------------------------- */
+
+
+@media only screen and (min-width: 500px) {
+    
+    main {
+        gap: 2.4rem;
+        max-width: 54rem;
+    }
+    
+    /* ------------------------------- Desktop View: Top Card Styles ------------------------- */
+    
+    .top-card {
+        width: 54rem;
+        padding: 2.7rem 3.6rem 2.5rem 3.2rem;
+        border-radius: 2rem;
+    }
+    
+    .top-card__logo {
+        max-width: 7.2rem;
+    }
+    
+    .top-card__data--balance-text {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+    
+    .top-card__data--balance-num {
+        margin-top: 0.8rem;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+    }
+    
+    /* ------------------------------- Desktop View: Main Card Styles ------------------------- */
+    
+    .card {
+        width: 54rem;
+        padding: 3.2rem 4rem;
+        border-radius: 2rem;
+    }
+    
+    .card__title {
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+    }
+    
+    .card__bar {
+        gap: 0.8rem;
+    }
+    
+    .card__bars {
+        margin-top: 6.6rem;
+        padding-bottom: 3.2rem;
+    }
+    
+    .bar--size {
+        width: 5rem;
+        border-radius: 0.5rem;
+    }
+    
+    .bar--day {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    
+    .card__data {
+        margin-top: 3.2rem;
+    }
+    
+    .card__data--total--text {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+    
+    .card__data--total--usd {
+        margin-top: 0.1rem;
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+    }
+    
+    .card__data--increase-percentage {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+    
+    .card__data--increase-text {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+}

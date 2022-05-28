@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+
+</head>
+<body>
+  <main>
+    <section class="top-card">
+      <div class="top-card__data">
+        <h2 class="top-card__data--balance-text">My balance</h2>
+        <h2 class="top-card__data--balance-num">$921.48</h2>
+      </div>
+      <div>
+        <img class="top-card__logo" src="images/logo.svg" alt="logo">
+      </div>
+    </section>
+
+    <section class="card">
+      <h1 class="card__title">Spending - Last 7 days</h1>
+      <div class="card__bars">
+        <div class="card__bar">
+          <div class="bar--size">
+            <div class="bar--amount"></div>
+          </div>
+          <div class="bar--day">mon</div>
+        </div>
+        <div class="card__bar">
+          <div class="bar--size">
+            <div class="bar--amount"></div>
+          </div>
+          <div class="bar--day">tue</div>
+        </div>
+        <div class="card__bar">
+          <div class="bar--size">
+            <div class="bar--amount"></div>
+          </div>
+          <div class="bar--day">wed</div>
+        </div>
+        <div class="card__bar">
+          <div class="bar--size">
+            <div class="bar--amount"></div>
+          </div>
+          <div class="bar--day">thu</div>
+        </div>
+        <div class="card__bar">
+
+          <div class="bar--size">
+            <div class="bar--amount"></div>
+          </div>
+          <div class="bar--day">fri</div>
+        </div>
+        <div class="card__bar">
+
+          <div class="bar--size">
+            <div class="bar--amount"></div>
+          </div>
+          <div class="bar--day">sat</div>
+        </div>
+        <div class="card__bar">
+
+          <div class="bar--size">
+            <div class="bar--amount"></div>
+          </div>
+          <div class="bar--day">sun</div>
+        </div>
+      </div>
+
+      <div class="card__data">
+        <div class="card__data--total">
+          <h2 class="card__data--total--text">Total this month</h2>
+          <p class="card__data--total--usd">$478.33</p>
+        </div>
+        <div class="card__data--increase">
+          <h2 class="card__data--increase-percentage">+2.4%</h2>
+          <p class="card__data--increase-text">from last month</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="app.js"></script>
+</html>
